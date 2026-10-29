@@ -1,0 +1,187 @@
+[
+  {
+    "id": "edge",
+    "category": "edge",
+    "label": "EDGE AI / RESEARCH",
+    "title": "Edge AI benchmark validation",
+    "subtitle": "Reliability of Edge AI · KU Leuven",
+    "stack": [
+      "nRF52840 DK",
+      "Zephyr",
+      "TensorFlow Lite Micro",
+      "Python"
+    ],
+    "status": "In progress",
+    "number": "01",
+    "description": "Embedded benchmark execution, host-to-board comparisons and a reproducible baseline for studying hardware faults.",
+    "metric": "48,608",
+    "metricLabel": "anomaly windows validated against the host",
+    "goal": "Establish how hardware bit flips affect TinyML inference, then assess software techniques that improve resilience.",
+    "work": [
+      "Implemented and validated keyword spotting, image classification, anomaly detection and visual wake words benchmarks on nRF52840 DK under Zephyr.",
+      "Built Python evaluation workflows and documented reproducible firmware builds and numerical comparisons."
+    ],
+    "results": [
+      "48,608 anomaly-detection windows across 248 recordings matched the aligned host outputs exactly.",
+      "The anomaly evaluation achieved a mean-machine ROC AUC of 0.858. Numerical agreement and model quality are separate measurements."
+    ],
+    "next": [
+      "Establish and run fault-injection experiments to assess bit-flip reliability.",
+      "Apply software-implemented fault-tolerance techniques and compare protected and unprotected benchmarks.",
+      "Deliver a final technical report documenting methods, results and limitations."
+    ],
+    "architecture": [
+      "The nRF52840 DK runs embedded inference under Zephyr with TensorFlow Lite Micro.",
+      "Python workflows compare board outputs with an aligned host reference, supporting numerical checks before reliability experiments."
+    ],
+    "interpretation": [
+      "Exact agreement applies to the evaluated anomaly-detection windows; it does not establish immunity to hardware faults.",
+      "ROC AUC describes anomaly-detection quality. Fault-injection and protection experiments are the next research stage."
+    ]
+  },
+  {
+    "id": "ev",
+    "category": "firmware",
+    "label": "FIRMWARE / AUTOMOTIVE",
+    "title": "EV dashboard and ADAS warnings",
+    "subtitle": "EV Dashboard & ADAS · Emertxe",
+    "stack": [
+      "STM32F103C8T6",
+      "Embedded C",
+      "PICSimLab",
+      "UART"
+    ],
+    "status": "Completed internship",
+    "number": "02",
+    "description": "An EV dashboard and driver-assistance warning system built around sensor inputs, vehicle states and serial telemetry.",
+    "metric": "STM32",
+    "metricLabel": "firmware and system simulation",
+    "goal": "Combine real-time EV parameter monitoring with proximity-based warning features in an embedded prototype.",
+    "work": [
+      "Developed the dashboard and warning system using STM32F103C8T6 and PICSimLab.",
+      "Integrated ultrasonic sensing, collision and blind-spot warning features, vehicle state management and UART telemetry."
+    ],
+    "results": [
+      "Completed the implementation during the June–July 2026 Emertxe online internship.",
+      "Delivered a prototype combining vehicle monitoring and warning logic."
+    ],
+    "next": [],
+    "architecture": [
+      "Ultrasonic sensor inputs feed the STM32 warning logic for collision and blind-spot indications.",
+      "Vehicle state management coordinates EV monitoring, while UART provides a telemetry communication path.",
+      "PICSimLab supports simulation of the embedded dashboard and warning behavior."
+    ],
+    "interpretation": [
+      "The deliverable combines sensing, vehicle states, dashboard monitoring and warning logic in an internship prototype.",
+      "The warning features demonstrate embedded integration; no road-testing or production ADAS certification is claimed."
+    ]
+  },
+  {
+    "id": "lora",
+    "category": "iot",
+    "label": "IOT / CONNECTIVITY",
+    "title": "LOCAT’IT GPS-independent tracking",
+    "subtitle": "LOCAT’IT · Team academic project",
+    "stack": [
+      "STM32F103C8T6",
+      "Arduino Uno",
+      "SX1278 · 433 MHz",
+      "OLED / RSSI"
+    ],
+    "status": "Academic prototype",
+    "number": "03",
+    "description": "A team prototype exploring GPS-independent asset tracking using LoRa communication and real-time signal-strength display.",
+    "metric": "RSSI",
+    "metricLabel": "LoRa signal-strength readings displayed on OLED",
+    "goal": "Explore whether one portable receiver can guide a user towards a tagged asset using changes in LoRa signal strength, without GPS coordinates.",
+    "work": [
+      "Contributed to hardware integration, report preparation and the team presentation.",
+      "Worked within a three-person project team, with software and PCB design contributions shared across the group."
+    ],
+    "results": [
+      "The team established communication and displayed RSSI values on an OLED screen.",
+      "Reported RSSI readings stayed around −92 to −107 dBm and changed too little with proximity to support reliable direction finding.",
+      "The project did not achieve the complete tracking objective; signal reception and display formed the working baseline."
+    ],
+    "next": [],
+    "architecture": [
+      "The report’s final-device description pairs an Arduino / SX1278 transmitter with an STM32 / SX1278 receiver and OLED display.",
+      "LoRa packets provide a wireless link; the receiver presents RSSI readings as feedback about signal strength.",
+      "The intended tracking method uses readings collected while moving the receiver. RSSI alone does not directly measure direction of arrival.",
+      "Proposed follow-up work included calibrated distance estimation, measurements from multiple receiver positions and alternative radio or antenna tests."
+    ],
+    "interpretation": [
+      "The report discusses Raspberry Pi and ESP32-C3 configurations alongside its final Arduino / STM32 description. These reflect development iterations, not one combined hardware configuration.",
+      "Range figures in the report are estimates. No validated positioning accuracy or measured energy saving is claimed here."
+    ]
+  },
+  {
+    "id": "robot",
+    "category": "firmware",
+    "label": "ROBOTICS / CONTROL",
+    "title": "Autonomous line-following robot",
+    "subtitle": "Autonomous Line-Following Robot",
+    "stack": [
+      "ARM Cortex-M",
+      "Embedded C",
+      "PID"
+    ],
+    "status": "Academic project",
+    "number": "04",
+    "description": "Real-time PID control and sensor calibration for an autonomous line-following prototype.",
+    "metric": "90%",
+    "metricLabel": "trajectory tracking accuracy",
+    "goal": "Improve line-following behavior through real-time control and calibrated sensor feedback.",
+    "work": [
+      "Implemented PID trajectory control on ARM Cortex-M.",
+      "Optimized sensor calibration and processing timing."
+    ],
+    "results": [
+      "Reached 90% tracking accuracy.",
+      "Reduced processing latency by 20%."
+    ],
+    "next": [],
+    "architecture": [
+      "Sensor readings provide feedback about the robot’s position relative to the line.",
+      "The PID controller uses tracking error to adjust the robot’s trajectory in real time.",
+      "Sensor calibration and processing timing support the feedback loop on the ARM Cortex-M platform."
+    ],
+    "interpretation": [
+      "Tracking accuracy and latency are project-reported evaluation results, rather than guarantees across every track or operating condition."
+    ]
+  },
+  {
+    "id": "parking",
+    "category": "iot",
+    "label": "IOT / SENSOR SYSTEMS",
+    "title": "Smart parking IoT system",
+    "subtitle": "Smart Parking IoT System",
+    "stack": [
+      "ESP / Wi-Fi",
+      "Ultrasonic sensing",
+      "Dashboard"
+    ],
+    "status": "Academic project",
+    "number": "05",
+    "description": "An ultrasonic sensing prototype that publishes parking-slot availability to a live dashboard.",
+    "metric": "30%",
+    "metricLabel": "estimated reduction in search time",
+    "goal": "Make parking availability visible through a connected sensor system.",
+    "work": [
+      "Integrated ultrasonic sensors with an ESP / Wi-Fi platform.",
+      "Built live slot monitoring through a dashboard."
+    ],
+    "results": [
+      "Reduced estimated parking search time by 30% in the project evaluation."
+    ],
+    "next": [],
+    "architecture": [
+      "Ultrasonic sensors detect whether monitored parking spaces are occupied.",
+      "The ESP / Wi-Fi platform communicates slot availability to the dashboard.",
+      "The dashboard presents live availability so a user can identify a free space before searching manually."
+    ],
+    "interpretation": [
+      "The 30% figure is an estimated improvement from the project evaluation, not a measured city-wide deployment outcome."
+    ]
+  }
+]
