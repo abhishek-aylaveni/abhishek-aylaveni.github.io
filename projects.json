@@ -37,7 +37,9 @@
     "interpretation": [
       "Exact agreement applies to the evaluated anomaly-detection windows; it does not establish immunity to hardware faults.",
       "ROC AUC describes anomaly-detection quality. Fault-injection and protection experiments are the next research stage."
-    ]
+    ],
+    "sourceUrl": "https://github.com/abhishek-aylaveni/embedded-projects/blob/main/edge-ai-reliability.md",
+    "sourceLabel": "View project documentation"
   },
   {
     "id": "ev",
@@ -74,7 +76,9 @@
     "interpretation": [
       "The deliverable combines sensing, vehicle states, dashboard monitoring and warning logic in an internship prototype.",
       "The warning features demonstrate embedded integration; no road-testing or production ADAS certification is claimed."
-    ]
+    ],
+    "sourceUrl": "https://github.com/abhishek-aylaveni/embedded-projects/blob/main/ev-dashboard-adas.md",
+    "sourceLabel": "View project documentation"
   },
   {
     "id": "lora",
@@ -113,7 +117,9 @@
     "interpretation": [
       "The report discusses Raspberry Pi and ESP32-C3 configurations alongside its final Arduino / STM32 description. These reflect development iterations, not one combined hardware configuration.",
       "Range figures in the report are estimates. No validated positioning accuracy or measured energy saving is claimed here."
-    ]
+    ],
+    "sourceUrl": "https://github.com/abhishek-aylaveni/embedded-projects/tree/main/locatit-stm32-lora",
+    "sourceLabel": "View source and validation"
   },
   {
     "id": "robot",
@@ -129,16 +135,15 @@
     "status": "Academic project",
     "number": "04",
     "description": "Real-time PID control and sensor calibration for an autonomous line-following prototype.",
-    "metric": "90%",
-    "metricLabel": "trajectory tracking accuracy",
+    "metric": "PID",
+    "metricLabel": "closed-loop trajectory control",
     "goal": "Improve line-following behavior through real-time control and calibrated sensor feedback.",
     "work": [
       "Implemented PID trajectory control on ARM Cortex-M.",
       "Optimized sensor calibration and processing timing."
     ],
     "results": [
-      "Reached 90% tracking accuracy.",
-      "Reduced processing latency by 20%."
+      "Implemented real-time PID trajectory control and sensor calibration on ARM Cortex-M."
     ],
     "next": [],
     "architecture": [
@@ -147,8 +152,10 @@
       "Sensor calibration and processing timing support the feedback loop on the ARM Cortex-M platform."
     ],
     "interpretation": [
-      "Tracking accuracy and latency are project-reported evaluation results, rather than guarantees across every track or operating condition."
-    ]
+      "Performance depends on the track, sensor calibration and controller tuning. No numerical accuracy or latency claim is made without a retained measurement method."
+    ],
+    "sourceUrl": "https://github.com/abhishek-aylaveni/embedded-projects/blob/main/line-following-robot.md",
+    "sourceLabel": "View project documentation"
   },
   {
     "id": "parking",
@@ -164,15 +171,15 @@
     "status": "Academic project",
     "number": "05",
     "description": "An ultrasonic sensing prototype that publishes parking-slot availability to a live dashboard.",
-    "metric": "30%",
-    "metricLabel": "estimated reduction in search time",
+    "metric": "Live",
+    "metricLabel": "parking-slot availability monitoring",
     "goal": "Make parking availability visible through a connected sensor system.",
     "work": [
       "Integrated ultrasonic sensors with an ESP / Wi-Fi platform.",
       "Built live slot monitoring through a dashboard."
     ],
     "results": [
-      "Reduced estimated parking search time by 30% in the project evaluation."
+      "Integrated ultrasonic sensing and a Wi-Fi dashboard to show parking-slot availability."
     ],
     "next": [],
     "architecture": [
@@ -181,7 +188,9 @@
       "The dashboard presents live availability so a user can identify a free space before searching manually."
     ],
     "interpretation": [
-      "The 30% figure is an estimated improvement from the project evaluation, not a measured city-wide deployment outcome."
-    ]
+      "The prototype demonstrates connected occupancy monitoring. No measured reduction in parking search time is claimed."
+    ],
+    "sourceUrl": "https://github.com/abhishek-aylaveni/embedded-projects/blob/main/smart-parking-iot.md",
+    "sourceLabel": "View project documentation"
   }
 ]
